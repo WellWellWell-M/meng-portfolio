@@ -980,3 +980,33 @@ blockquote br {
     line-height: 1.8;
     color: #c7b9dc;
 }
+
+/* 语言切换按钮样式 */
+.language-switcher {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.language-option {
+    padding: 8px 16px;
+    border: 1px solid #FCD34D;
+    border-radius: 4px;
+    background: transparent;
+    color: #FCD34D;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.language-option:hover {
+    background: rgba(252, 211, 77, 0.1);
+}
+
+.language-option.active {
+    background: #FCD34D;
+    color: #4C1D95;
+    border-color: #FCD34D;
+}

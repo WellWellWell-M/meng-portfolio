@@ -1,26 +1,113 @@
 {
-    "title": "have fun!",
+    "title": "have fun",
     "intro": "hi I'm Meng",
     "description": "I want to make games everyone can play",
     "menu": {
-        "starGame": {
+        "star-game": {
             "title": "Star Game",
             "description": "Solo-developed Web Game"
         },
-        "theWELL": {
+        "dreams-of-fuyao": {
+            "title": "Dreams of FUYAO",
+            "description": "Lead Narrative Designer, MMORPG"
+        },
+        "the-well": {
             "title": "The WELL",
-            "description": "Short Fiction Story"
+            "description": "English Short Sci-Fi"
+        },
+        "twin-embroidery": {
+            "title": "Twin Embroidery",
+            "description": "Digital Comic Series"
+        },
+        "glorious-girl-band": {
+            "title": "The Glorious Girl Band",
+            "description": "Digital Comic Series"
+        },
+        "letter-in-the-night-rain": {
+            "title": "A Letter in the Night Rain",
+            "description": "Digital Comic Series"
+        },
+        "xiu-xian": {
+            "title": "In Life, Two Words: Xiu Xian",
+            "description": "Original Fantasy Light Novel"
+        },
+        "more-samples": {
+            "title": "More Writing Samples",
+            "description": "in Chinese, before 2018"
+        },
+        "about": {
+            "title": "about me",
+            "description": "Experience & Contact"
         }
     },
-    "projectDetails": {
-        "starGame": {
-            "overview": "This is a mini game that unfolds across three screens in about two minutes. As my first solo game development project, it marks a special milestone in my coding journey. Over three weeks, I taught myself essential tools - from game engines (GMS, Godot) to AI assistants (Cursor, Midjourney, Stable Diffusion) and version control (GitHub).",
+    "sections": {
+        "star-game": {
+            "title": "Overview",
+            "overview": "This is a mini game that unfolds across three screens in about two minutes. As my first solo game development project, it marks a special milestone in my coding journey. Over three weeks, I taught myself essential tools - from game engines (GMS, Godot) to AI assistants (Cursor, Midjourney, Stable Diffusion) and version control (GitHub).\n\nI tried to tell a story about a lonely girl who shoots down stars and encircles them to make them her companions. Eventually, she creates an entire universe - including the Sun, Earth, and Moon - yet remains alone. I wish I had more time to tell the story through gameplay instead of text (and create better artwork - sorry about my poor pixel sprite animation!).",
             "conceptArt": "I used Midjourney to create the initial concept art, inspired by Van Gogh's starry nights. Then I ran it through Stable Diffusion to transform it into pixel art - which you'll see in the game's final scene. I had a lot of fun playing with these AI tools and can't wait to experiment more with them in future projects!",
-            "development": "Though it's far from perfect (quite rough actually), I'm proud to have brought it from concept to playable reality. I chose to omit tutorials, trusting in our natural inclination to play. But here's a small hint if you're wondering how to get <span class=\"highlight\">starTed</span> - sometimes you need to draw your own path :)"
+            "development": "Though I had great help from Cursor AI as my coding assistant, programming was still the most challenging part of the development process. At first, I needed Cursor to explain every line of code to me. But gradually, I learned to read most of the code and even started tweaking parameters on my own. I have to say, it felt like magic - watching the game respond to my code changes was fascinating! This experience has definitely motivated me to learn more about programming - just like now building my personal portfolio website."
         },
-        "theWELL": {
-            "overview": "This story holds special significance for me...",
-            "content": "In rural China, wells hold ancient mysteries..."
+        "dreams-of-fuyao": {
+            "title": "Note",
+            "teaser": "This is the official teaser trailer for Dreams of FUYAO, where I served as the scriptwriter and initial visual designer.\n\nDreams of FUYAO centers on women's awakening, with its story told primarily through the female protagonist's perspective. The teaser adopts this same narrative approach.\n\nIn the trailer, I focused on highlighting several layers of conflict: the tension between a seemingly prosperous nation and its underlying social unrest; the external conflict between the protagonist's ambition for power and the era's expectations of women; and the internal struggle of the protagonist as she faces obstacles in her growth and advancement.\n\nThese conflicts are woven together through both narrative and visual elements. A key sequence I designed shows the protagonist's transformation: betrayed and sinking into water—a metaphor for despair—she ultimately opens her eyes again, emerging stronger than before. This moment symbolizes her awakening and self-empowerment.\n\nThrough this interplay of story and visuals, I hope to spark players' curiosity about how these conflicts will be resolved and build anticipation for the story ahead.",
+            "opening": "As the lead narrative designer and visual supervisor, I directed this opening cinematic to immerse players in the world of Dreams of FUYAO.\n\nVisually, we merged traditional ink painting with gold-line techniques, symbolizing the fusion of classical settings (a feudal dynasty) with modern themes (women's awakening). Working closely with animators, we crafted several meaningful shots—such as when narrating Chancellor Duan's rise to power with public support, the camera descends from his feet to a battlefield littered with corpses, creating a visual counterpoint to the narrative that invites players to question the story's deeper implications.\n\nNarratively, the cinematic sets the stage by introducing the world and its initial conflict: how will our protagonist confront the Academy's fall from grace? It also subtly weaves in Hua Cijing—not just a figure of the past, but a character whose journey parallels the protagonist's, together embodying the central exploration of women's awakening.",
+            "character": "This is the character trailer for Hua Cijing—a pivotal antagonist whose journey intertwines with the protagonist's, like two reflections in a mirror, one inside and one outside, in Dreams of FUYAO.\n\nHua Cijing's story draws from a long-standing literary tradition, such as the Qing Dynasty's Destiny of Rebirth, where talented women rise to power only to face inevitable constraints. To reflect this parallel and highlight her character's unique presence, I incorporated elements of Chinese opera rather than conventional monologues.\n\nUnlike her literary predecessors, Hua Cijing shatters the mold with her relentless defiance against fate. Her conflict with the protagonist represents two opposing approaches to shared struggles: radical upheaval versus measured reformation. Their parallel journeys—one dismantling the system, the other striving to mend it—add depth to the narrative, transforming personal tragedy into a broader allegory of power, idealism, and the choices women face in defining their own paths."
+        },
+        "the-well": {
+            "afterword": "This story holds special significance for me, not only as my first attempt at writing in English but as a journey into self-discovery. For years, I excelled at commercial writing - analyzing markets, audience needs, and project requirements. Yet when I finally set aside all commercial considerations and ventured into my own heart, I discovered a well had been there all along.\n\nIn rural China, wells hold ancient mysteries. Every village seems to harbor tales of women who, in moments of despair, leapt into wells, their spirits lingering as haunting presences in the dark waters below.\n\nAs a child, these stories made me fear wells. They seemed to embody life's troubles - like drawing water from their depths, each attempt to resolve one problem only revealed more beneath. But years later, I encountered a story about African village women that changed my perspective. Though NGOs had installed modern water systems in their communities, many women still chose to visit the wells. It was their sanctuary, the one place where they could leave their families and be themselves.\n\nThis revelation transformed my understanding. What I had seen as an endless source of pain was actually a wellspring of solace - for most women, the world itself has often been the source of suffering.\n\nI created this story because women seem to always be searching for their own wells, as the world beyond belongs to men. As Simone de Beauvoir observed in The Second Sex: \"The wonderful thing about man - in adolescence and maturity - is that he is not destined; the word 'destiny' has a different resonance for boys and girls. The more a boy grows and develops, the more he opens his adventure into the world and the more he is called to surpass himself. Meanwhile, the girl will discover that the world is limited, she will learn that she is destined for man, and she will dream not of surpassing herself but of finding happiness.\""
+        },
+        "twin-embroidery": {
+            "note": "Among all Chinese cities, Suzhou holds a special place in my heart as the one that best embodies traditional classical beauty.\n\nAfter embarking on my digital nomad journey, I planned to spend a year in Suzhou, seeking inspiration from the city. This decision eventually led to the creation of Twin Embroidery, a work centered around the art of Suzhou double-sided embroidery.\n\nThis ancient and remarkable craft allows masters to use incredibly fine threads to create two distinct yet equally intricate images on opposite sides of a single piece of silk. The technique beautifully mirrors the theme of my story: a seemingly strong woman unable to escape the shadows of her past. She initially learns double-sided embroidery in the hope of stitching a new self over her scarred past.\n\nHowever, like the two sides of an embroidered piece, she comes to understand that both her strength and her scars are integral to who she is. Through love and art, she ultimately learns to embrace her whole self."
+        },
+        "glorious-girl-band": {
+            "note": "The Glorious Girl Band is my first serialized comic, born from a simple yet bold idea: a rock band of talented young women in ancient China.\n\nSet in an idealized historical world free from traditional constraints, the story follows seven uniquely gifted girls as they come together to form an unconventional, wonderfully chaotic band. Their adventures weave Chinese tradition with the raw energy of rock music, creating something entirely fresh and unexpected.\n\nThis isn't a story about oppression or struggle—it's a celebration of creativity, friendship, and the sheer joy of making music together. While such freedom might exist only in this fantasy world, that's precisely why I wanted these characters to shine as brightly as possible on their imaginary stage.\n\nThey roar their songs to the world—not as cries of despair, but with a power that sometimes moves me to tears even more deeply than sorrow."
+        },
+        "letter-in-the-night-rain": {
+            "note": "A Letter in the Night Rain draws inspiration from Li Shangyin's classical Tang dynasty poem of the same title:",
+            "poem": {
+                "original": "君问归期未有期， 巴山夜雨涨秋池。\n何当共剪西窗烛， 却话巴山夜雨时。",
+                "translation": "You ask me when I'll return, but I cannot say,\nAs autumn rain fills pools on Mount Ba in the night.\nWhen will we trim wicks by the western window again,\nAnd speak of this night rain on Mount Ba?"
+            },
+            "description": "The comic expands the poem's yearning and melancholy into a political drama set in ancient China. Each chapter opens with an excerpt from a letter written on a rainy night, serving both as a chapter summary and thematic framework. The story begins thus:",
+            "letter": {
+                "original": "凌弟台鉴，寒灯夜雨，怀人倍切。愚兄凭窗而叹，忆及明成十年与弟京郊初晤，竟恍然如昨。",
+                "translation": "Dear Brother Ling, On this rainy night, by the cold lamp's light, my longing for you grows ever deeper. As I lean against the window, lost in thought, I recall our first meeting on the outskirts of the capital ten years ago—it feels like only yesterday..."
+            },
+            "conclusion": "This nested narrative structure allows the letter to unfold gradually across time, each carefully chosen phrase revealing a crucial moment as two close friends grow apart.\n\nAt its heart, this is a story about kindred spirits—two like-minded friends ultimately separated by their different political ideals. After they both achieve their ambitions, one writes this letter in an attempt to salvage their friendship, unaware it would become his final words."
+        },
+        "about": {
+            "experience": {
+                "title": "Experience",
+                "items": [
+                    {
+                        "year": "2021-2024",
+                        "title": "37 Games | Narrative Team Lead",
+                        "project": "Dreams of FUYAO, MMORPG"
+                    },
+                    {
+                        "year": "2016-2020",
+                        "title": "Full-time Writer | Comic Script Writer & Novelist"
+                    }
+                ]
+            },
+            "contact": {
+                "title": "Contact",
+                "email": "luisemeng1994@gmail.com",
+                "phone": "+86 182-7091-7675",
+                "social": "@luisemeng.bsky.social"
+            }
+        },
+        "xiu-xian": {
+            "title": "In Life, Two Words: Xiu Xian",
+            "overview": "After joining the Yunlai Sect, Xia Fan finally heard his fellow disciples discussing the mysteries of the Two-Character Cultivation Mantra—a unique, two-word principle said to guide one's path to enlightenment. It was the ultimate opportunity, enough to drive all cultivators mad. Only true prodigies, chosen by Heaven, could comprehend their own mantra.\n\nWithin the entire Yunlai Sect, only the noble and otherworldly senior sister had been blessed with such a destiny.\n\n\"So, what is the Two-Character Cultivation Mantra of our noble and otherworldly senior sister?\" Xia Fan asked.\n\nSenior brother: \"Slaughter pigs.\"\n\nIn this unconventional cultivation world, there exists a fateful opportunity known as the Two-Character Cultivation Mantra. By following its guidance, one can rapidly advance their cultivation and ascend to immortality. Yet every mantra, though unique, is seen as a curse. It forces the kind-hearted to kill, the loyal to betray, and the affectionate to forget love.\n\n\"Can Heaven truly be wrong?\"\n\nTold with a lighthearted tone, this story follows a group of idealistic youths as they struggle against the burning flames of destiny, using nothing but their courage, conviction, and mortal flesh to challenge the will of Heaven."
         }
+    },
+    "common": {
+        "scrollDescription": "and i LOVE zelda!!!",
+        "restart": "Restart",
+        "note": "Note",
+        "overview": "Overview",
+        "readMore": "Read More",
+        "loading": "Loading..."
     }
 }
