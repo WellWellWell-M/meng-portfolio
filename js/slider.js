@@ -45,7 +45,8 @@ class ImageSlider {
     }
 
     updateSlider() {
-        const offset = -this.currentIndex * 570;
+        const containerWidth = this.container.offsetWidth;  // 获取当前容器宽度
+        const offset = -this.currentIndex * containerWidth;
         this.track.style.transform = `translateX(${offset}px)`;
         this.updateButtons();
     }
