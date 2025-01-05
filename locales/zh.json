@@ -1,0 +1,26 @@
+{
+    "title": "have fun!",
+    "intro": "廖梦",
+    "description": "我想制作每个人都能玩的游戏",
+    "menu": {
+        "starGame": {
+            "title": "星星游戏",
+            "description": "独立开发的网页游戏"
+        },
+        "theWELL": {
+            "title": "井",
+            "description": "短篇小说"
+        }
+    },
+    "projectDetails": {
+        "starGame": {
+            "overview": "这是一个在大约两分钟内展开的迷你游戏。作为我第一个独立开发的游戏项目，它标志着我编程旅程中的一个特殊里程碑。在三周的时间里，我自学了必要的工具——从游戏引擎（GMS、Godot）到 AI 助手（Cursor、Midjourney、Stable Diffusion）和版本控制（GitHub）。",
+            "conceptArt": "我使用 Midjourney 创建了初始概念艺术，灵感来自梵高的星空。然后我通过 Stable Diffusion 将其转化为像素艺术——您将在游戏的最终场景中看到它。我在玩这些 AI 工具时感到非常开心，迫不及待想在未来的项目中进行更多实验！",
+            "development": "尽管它远非完美（实际上相当粗糙），但我为将其从概念变为可玩现实而感到自豪。我选择省略教程，相信我们自然的游戏倾向。但如果您想知道如何开始，给您一个小提示——有时您需要自己绘制路径 :)"
+        },
+        "theWELL": {
+            "overview": "这个故事对我来说具有特殊意义...",
+            "content": "在中国农村，井承载着古老的神秘..."
+        }
+    }
+}

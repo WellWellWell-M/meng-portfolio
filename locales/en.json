@@ -1,0 +1,26 @@
+{
+    "title": "have fun!",
+    "intro": "hi I'm Meng",
+    "description": "I want to make games everyone can play",
+    "menu": {
+        "starGame": {
+            "title": "Star Game",
+            "description": "Solo-developed Web Game"
+        },
+        "theWELL": {
+            "title": "The WELL",
+            "description": "Short Fiction Story"
+        }
+    },
+    "projectDetails": {
+        "starGame": {
+            "overview": "This is a mini game that unfolds across three screens in about two minutes. As my first solo game development project, it marks a special milestone in my coding journey. Over three weeks, I taught myself essential tools - from game engines (GMS, Godot) to AI assistants (Cursor, Midjourney, Stable Diffusion) and version control (GitHub).",
+            "conceptArt": "I used Midjourney to create the initial concept art, inspired by Van Gogh's starry nights. Then I ran it through Stable Diffusion to transform it into pixel art - which you'll see in the game's final scene. I had a lot of fun playing with these AI tools and can't wait to experiment more with them in future projects!",
+            "development": "Though it's far from perfect (quite rough actually), I'm proud to have brought it from concept to playable reality. I chose to omit tutorials, trusting in our natural inclination to play. But here's a small hint if you're wondering how to get <span class=\"highlight\">starTed</span> - sometimes you need to draw your own path :)"
+        },
+        "theWELL": {
+            "overview": "This story holds special significance for me...",
+            "content": "In rural China, wells hold ancient mysteries..."
+        }
+    }
+}

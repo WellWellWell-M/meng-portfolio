@@ -1,0 +1,981 @@
+/* 全局样式重置：清除所有元素的默认外边距、内边距，并使用更合理的盒模型 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 页面基础样式设置 */
+body {
+    /* 设置网页字体，按优先级从左到右尝试使用 */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    /* 设置深紫色背景 */
+    background-color: #4C1D95;
+    /* 设置文字颜色为金色 */
+    color: #FCD34D;
+    /* 设置行高为字体大小的1.6倍 */
+    line-height: 1.6;
+    /* 允许页面垂直滚动 */
+    overflow-y: auto;
+    /* 确保页面最小高度为视窗高度 */
+    min-height: 100vh;
+}
+
+/* 整体容器 */
+.container {
+    display: flex;
+    min-height: 100vh;
+    background: rgba(76, 29, 149, 0.2);
+}
+
+/* 侧边栏 */
+.sidebar {
+    width: 300px;
+    padding: 2rem;
+    background: rgba(76, 29, 149, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+/* 项目容器 */
+.project-container {
+    width: 720px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+}
+
+/* 内容区域 */
+.content-section {
+    display: none;
+    padding: 2rem;
+    margin-top: 3rem;
+    min-height: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+.content-section.active {
+    display: block;
+}
+
+/* 主容器布局设置 */
+.container {
+    /* 使用弹性布局，实现左右分栏 */
+    display: flex;
+    /* 确保容器最小高度为视窗高度 */
+    min-height: 100vh;
+    /* 容器四周留出2rem的空间 */
+    padding: 2rem;
+}
+
+/* 左侧边栏样式 */
+.sidebar {
+    /* 固定宽度为350像素 */
+    width: 360px;
+    /* 内部留出2rem的空间 */
+    padding: 2rem 3rem 2rem 3rem;
+    /* 固定页面滚动 */
+    position: fixed;
+    /* 设置高度为视窗高度 */
+    height: 100vh;
+    /* 隐藏溢出内容，去除滚动条 */
+    overflow: hidden;
+    /* 设置背景色与body相同 */
+    background-color: #4C1D95;
+}
+
+/* 头部区域样式：包含头像和介绍 */
+.header {
+    /* 使用弹性布局 */
+    display: flex;
+    /* 垂直居中对齐 */
+    align-items: center;
+    /* 元素之间间隔1.5rem */
+    gap: 1.5rem;
+    /* 底部margin为3rem */
+    margin-bottom: 2rem;
+}
+
+/* 头像容器样式 */
+.avatar {
+    /* 设置固定尺寸 */
+    width: 80px;
+    height: 80px;
+    /* 圆形边框 */
+    border-radius: 50%;
+    /* 隐藏溢出的部分 */
+    overflow: hidden;
+    /* 添加金色边框 */
+    border: 2px solid #FCD34D;
+    /* 防止头像被压缩 */
+    flex-shrink: 0;
+}
+
+/* 头像图片样式 */
+.avatar img {
+    /* 图片填充整个容器 */
+    width: 100%;
+    height: 100%;
+    /* 保持图片比例并填充容器 */
+    object-fit: cover;
+}
+
+/* 个人简介区域样式 */
+.intro {
+    /* 允许内容区域伸展 */
+    flex-grow: 1;
+}
+
+/* 简介标题样式 */
+.intro h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    color: #FCD34D;
+}
+
+/* 简介描述文字样式 */
+.intro .description {
+    font-size: 0.9rem;
+    /* 设置透明度 */
+    opacity: 0.8;
+    line-height: 1.2;
+}
+
+/* 菜单列表样式 */
+.menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+
+.menu.expanded li {
+    margin-bottom: -0.7rem; /* 保持默认紧凑间距 */
+}
+
+/* 菜单项样式 */
+.menu li {
+    margin-bottom: -0.5rem;  /* 默认就是紧凑的 */
+    transition: all 0.3s ease;
+}
+
+/* 菜单项悬停和激活状态 */
+.menu li:hover, 
+.menu li a.active {
+    /* 移动到原始位置（相当于向右移动10px） */
+    transform: translateX(0);
+}
+
+/* 菜单链接样式 */
+.menu a {
+    /* 移除下划线 */
+    text-decoration: none;
+    /* 继承父元素的颜色 */
+    color: inherit;
+    /* 设置为块级元素 */
+    display: block;
+    padding: 0.2rem 0;
+}
+
+/* 菜单项标题样式 */
+.menu .title {
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 0.1rem;
+}
+
+/* 菜单项描述文字样式 */
+.menu .description {
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    /* 添加颜色过渡效果 */
+    color: #FFE381;
+    margin-top: 0.2rem;
+}
+
+/* 菜单项悬停和激活时的描述文字 */
+.menu li:hover .description,
+.menu li a.active .description {  /* 注意这里改为选择active的接元 */
+    opacity: 0.7;
+    display: block;
+}
+
+/* 激活状态的菜单项 */
+.menu li a.active {
+    /* 添加其他视觉效果，比如加 */
+    color: #FFE381;
+}
+
+/* 主内容区域 */
+.content {
+    flex: 1;
+    margin-left: 360px;
+    padding: 2rem;
+    height: auto;
+    position: relative;
+}
+
+/* 当显示主页内容时 */
+.content.showing-home {
+    overflow: hidden;  /* 完全禁用滚动 */
+    height: 100vh;  /* 限制高度为视窗高度 */
+}
+
+/* 卷轴图片容器样式 */
+.scroll-container {
+    position: relative;
+    text-align: center;
+    margin-top: 4rem;
+    height: auto;
+    padding-bottom: 0;
+}
+
+/* 项目内容区域的滚动设置 */
+.content:not(.showing-home) {
+    overflow-y: auto;  /* 只有非主页内容才允许滚动 */
+}
+
+/* 卷轴图片样式 */
+.scroll-image {
+    max-width: 35%;
+    height: auto;
+    transition: transform 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.scroll-image:hover {
+    /* 悬停时放大效果 / Scale up effect on hover */
+    transform: scale(1.02);
+}
+
+/* 卷轴描述文字样式 */
+.scroll-description {
+    position: absolute;
+    bottom: -40px;  /* 稍微调整文字位置 */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FCD34D;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+}
+
+/* 鼠标悬停时显示描述文字 */
+.scroll-container:hover .scroll-description {
+    opacity: 1;
+}
+
+/* 内容区块基础样式 */
+.content-section {
+    display: none;
+    padding: 2rem;
+    margin-top: 3rem !important;
+    min-height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* 激活的内容区域 */
+.content-section.active {
+    display: block;
+}
+
+/* 游戏容器样式 */
+.game-container {
+    width: 720px;
+    height: 360px;
+    max-width: 100%;
+    margin: 1.5rem auto 0;  /* 增加顶部边距为 2rem */
+    background: #2D1B69;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 游戏iframe样式 */
+.game-container iframe {
+    width: 100%;
+    height: 100%;
+    /* 边框 */
+    border: none;
+}
+
+/* 重启按钮样式 */
+.restart-btn {
+    /* 绝对定位在右上角 */
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    /* 按钮样式 */
+    background: #FCD34D;
+    color: #4C1D95;
+    border: none;
+    padding: 0.5rem 0.7rem;
+    border-radius: 8px;
+    cursor: pointer;
+    /* 添加过渡效果 */
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-size: 0.8rem;
+    /* 添加阴影 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 重启按钮悬停效果 */
+.restart-btn:hover {
+    background: #FFE381;
+    /* 上浮效果 */
+    transform: translateY(-2px);
+    /* 增加阴影 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 重启按钮点击效果 */
+.restart-btn:active {
+    /* 回到原位 */
+    transform: translateY(0);
+    /* 恢复原始阴影 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 项目容器样式 */
+.project-container,
+.about-container {
+    width: 100%;
+    margin: 0;
+    padding: 2rem;
+    position: relative;
+    top: 0;
+}
+
+/* 项目内容区域样式 */
+.project-content,
+.about-card {
+    width: 720px;
+    max-width: 100%;
+    margin: 0 auto;
+    background: rgba(214, 202, 233, 0.306);
+    border-radius: 16px;
+    padding: 1rem 2rem 1.5rem 2rem;
+    min-height: auto;
+}
+
+/* 项目内容文字样式 */
+.project-content h3 {
+    color: #c7b9dc;
+    font-size: 1.3rem;
+    margin: 2rem 0 0.3rem 0;  /* 增加标题的顶部边距为 3rem */
+}
+
+/* 第一个标题不需要那么大的边距 */
+.project-content h3:first-child {
+    margin-top: 1rem;
+}
+
+.project-content p {
+    color: #c7b9dc;  /* 稍微浅一点的紫色 */
+    line-height: 1.8;
+}
+
+/* 响应式设计：适配小屏幕设备 */
+@media (max-width: 768px) {
+    /* 减小容器内边距 */
+    .container {
+        padding: 1rem;
+    }
+
+    /* 侧边栏变为普通流布局 */
+    .sidebar {
+        width: 100%;
+        position: static;
+        height: auto;
+    }
+
+    /* 移除主内容区域的左边距 */
+    .content {
+        margin-left: 0;
+    }
+
+    /* 游戏容器自适应宽度 */
+    .game-container {
+        width: 100%;
+        /* 保持16:9的宽高比 */
+        height: 56.25vw;
+    }
+}
+
+/* 添加高亮文字样式 */
+.highlight {
+    color: #FCD34D;  /* 使用金黄色 */
+    font-weight: bold;  /* 可选：加粗效果 */
+}
+
+/* 恢复原始的 concept-art 样式 */
+.concept-art {
+    margin: 1rem 0rem 1rem 0rem;
+}
+
+.concept-art img {
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* development 图片样式 */
+.development {
+    margin: 1rem 0 1rem 0;
+}
+
+.development img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0rem;
+}
+
+/* 为小说封面创建独立的样式 */
+.novel-cover {
+    margin: 2rem 0;
+    width: 100%;
+    height: calc(100% - 4rem);  /* 减去上下margin的4rem */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.novel-cover img {
+    width: 40%;
+    height: auto;
+    margin: 0 auto 0rem;
+    display: block;
+}
+
+.novel-cover .introduction {
+    width: 100%;  /* 确保介绍文本占满宽度 */
+    background: rgba(76, 29, 149, 0.1);
+    border-radius: 16px;
+    padding: 1.5em;
+    flex-grow: 1;  /* 让介绍部分填充剩余空间 */
+}
+
+/* 故事容器样式 */
+.story-container {
+    width: 100%;  /* 适应父容器宽度 */
+    margin: 1rem auto;  /* 恢复顶部间距 */
+    padding: 1rem 2rem 1.5rem 2rem;
+    background: rgba(214, 202, 233, 0.306);
+    border-radius: 16px;
+    height: 400px;
+    overflow-y: auto;
+}
+
+/* More Writing Samples 的故事容器样式 */
+#more-samples-section .story-container {
+    width: 720px;  /* 可以根据需要调整 */
+    max-width: 100%;
+    margin: 1rem auto;
+    padding: 1rem 2rem 1.5rem 2rem;
+    background: rgba(214, 202, 233, 0.306);
+    border-radius: 16px;
+    height: 400px;
+    overflow-y: auto;
+}
+
+/* 故事内容样式 */
+.story-content {
+    color: #c7b9dc;
+    line-height: 1.6;
+    font-size: 1.2rem;  /* 增加字体大小 */
+}
+
+/* 故事内容中的段落样式 */
+.story-content p {
+    font-size: 1.2rem;  /* 确保段落也使用相同的字体大小 */
+    margin-bottom: 1rem;  /* 段落间距 */
+    line-height: 1.8;  /* 增加行高使文本更易读 */
+}
+
+/* 标题样式 */
+#more-samples-section h3 {
+    color: #c7b9dc;
+    font-size: 1.3rem;
+    margin: 2rem 0 1rem 0;
+}
+
+/* 第一个标题的上边距可以小一点 */
+#more-samples-section h3:first-child {
+    margin-top: 1rem;
+}
+
+/* 优化滚动条样式 */
+.story-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.story-container::-webkit-scrollbar-track {
+    background: rgba(76, 29, 149, 0.05);
+    border-radius: 3px;
+}
+
+.story-container::-webkit-scrollbar-thumb {
+    background: rgba(76, 29, 149, 0.2);
+    border-radius: 3px;
+}
+
+.story-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(76, 29, 149, 0.3);
+}
+
+/* 隐藏消息容器样式 */
+.hidden-message {
+    position: relative;
+    text-align: center;
+    margin-top: 1.5rem;
+    height: 1.5em;  /* 确保容器高度固定 */
+}
+
+/* 隐藏的文字样式 */
+.hidden-message span {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    color: #fcd34dd0;  /* 使用你修改的金色 */
+    font-style: italic;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 三个点样式 */
+.hidden-message::before {
+    content: "...";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fcd34dd0;  /* 使用你修改的金色 */
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    transition: opacity 0.3s ease;
+}
+
+/* 鼠标悬浮效果 */
+.hidden-message:hover span {
+    opacity: 1;
+}
+
+.hidden-message:hover::before {
+    opacity: 0;
+}
+
+/* 视频容器样式 */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 720px;
+    margin: 2rem auto;
+    padding-bottom: 56.25%; /* 16:9 比例 */
+    height: 0;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;  /* 保持圆角一致 */
+}
+
+/* 说明文本样式 */
+.introduction {
+    background: rgba(76, 29, 149, 0.1);
+    border-radius: 16px;
+    padding: 1rem 1.5rem 2rem 1.5rem;
+    margin-top: 2rem;  /* 确保与上方图片有足够间距 */
+}
+
+.introduction h3 {
+    color: #ebdaf3;
+    margin-bottom:1rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .video-container {
+        width: 100%;
+        padding: 0 1rem;
+    }
+    
+    .video-container iframe {
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+    
+    .introduction {
+        margin: 1.5rem 1rem;  /* 保持一致的间距 */
+    }
+}
+
+/* 游戏标题链接样式 */
+.game-title {
+    color: #FFE381 !important;  /* 使用 !important 确保颜色优先级 */
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* 链接图标样式 */
+.link-icon {
+    font-size: 0.8em;
+    position: relative;
+    top: -2px;
+}
+
+/* 鼠标悬浮效果 */
+.game-title:hover {
+    color: #FFE381;  /* 悬浮时变为黄色 */
+}
+
+/* 移除之前的下划线相关样式 */
+.game-title::after {
+    display: none;  /* 或者直接删除这个规则 */
+}
+
+/* 播放器基础容器 */
+.slider-container {
+    width: 570px;
+    height: 442px;
+    position: relative;
+    margin: 2rem auto;
+    overflow: hidden;
+    background: rgba(89, 40, 162, 0.296);
+    border-radius: 12px;
+    padding: 0;  /* 确保没有内边距 */
+    display: flex;  /* 添加这行 */
+    align-items: center;  /* 添加这行 */
+}
+
+/* 图片轨道 */
+.slider-track {
+    position: absolute;
+    display: flex;
+    height: 100%;
+    transition: transform 0.3s ease;
+    left: 0;  /* 确保从容器左边开始 */
+}
+
+/* 单个图片容器 */
+.slider-image {
+    width: 570px;
+    height: 442px;
+    display: flex;
+    align-items: center;    /* 垂直居中 */
+    justify-content: center;/* 水平居中 */
+    flex-shrink: 0;        /* 防止压缩 */
+}
+
+/* 图片本身 */
+.slider-image img {
+    max-width: 95%;     /* 最大宽度限制为660px */
+    max-height: 95%;      /* 最大高度为容器高度的95% */
+    width: auto;          /* 宽度自动计算 */
+    height: auto;         /* 高度自动计算 */
+    object-fit: contain;  /* 保持比例 */
+}
+
+/* 切换按钮 */
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;  /* 固定宽度 */
+    height: 40px;  /* 固定高度 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(235, 218, 243, 0.2);
+    border: none;
+    color: #FFE381;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
+    border-radius: 4px;
+    font-size: 20px;  /* 调整箭头大小 */
+}
+
+.slider-button:hover {
+    background: rgba(235, 218, 243, 0.3);
+}
+
+.prev { left: 5px; }  /* 调整左箭头位置 */
+.next { right: 5px; }  /* 调整右箭头位置 */
+
+/* 隐藏按钮 */
+.slider-button.hidden {
+    display: none;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .slider-container {
+        height: auto;
+        aspect-ratio: 16/9;
+        margin: 1rem auto;
+    }
+    
+    .slider-button {
+        padding: 0.5rem;
+    }
+    
+    .slider-image {
+        width: 100vw;
+    }
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about-card {
+    background: rgba(196, 165, 246, 0.118);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 30px;
+    margin-top: 1rem;  /* 添加底部间距 */
+    margin-bottom: 1rem;  /* 添加底部间距 */
+}
+
+/* 最后一个 about card 不需要底部间距 */
+.about-card:last-child {
+    margin-bottom: 1rem;
+}
+
+/* 标题样式 */
+.about-card h2 {
+    color: #ebdaf3;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+/* 工作经历样式 */
+.experience-item {
+    padding-left: 30px;  /* 添加左侧缩进 */
+    margin-bottom: 25px;
+}
+
+.experience-item:last-child {
+    margin-bottom: 0;
+}
+
+.year {
+    color: #FFE381;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.job-title {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.company, .project-name {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+}
+
+.achievements {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.achievements li {
+    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* 联系方式样式 */
+.contact-info {
+    padding-left: 0px;  /* 保持与经历项目相同的左侧缩进 */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-item i {
+    color: #FFE381;
+    width: 20px;
+}
+
+.contact-item a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #FFE381;
+}
+
+/* 修复项目容器样式 */
+.project-container {
+    min-height: 800px;  /* 设置最小高度 */
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* 确保内容区域不会溢出 */
+.content {
+    width: 100%;
+    max-width: calc(100% - 360px);  /* 减去侧边栏宽度 */
+    margin-left: 360px;
+    padding: 2rem;
+    overflow-x: hidden;  /* 防止水平溢出 */
+}
+
+/* 引用块的基础样式 */
+blockquote {
+    margin: 1.5rem 0;
+    padding: 1.5rem 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    line-height: 1.8;
+}
+
+/* 中文诗句和文本样式 */
+.chinese-poem, .chinese-text {
+    color: #FFE381;  /* 黄色 */
+    margin-bottom: 1rem;  /* 在中英文之间添加间距 */
+    display: block;
+    text-align: center;
+}
+
+/* 英文翻译样式 */
+.english-translation {
+    color: rgba(255, 255, 255, 0.8);  /* 浅色 */
+    text-align: center;
+}
+
+/* 引用块内的换行 */
+blockquote br {
+    display: block;
+    margin: 0.3rem 0;
+}
+
+/* 信件引用样式 */
+.letter {
+    color: rgba(255, 255, 255, 0.8);;
+}
+
+.letter .chinese-text {
+    font-style: normal;
+    margin-top: 1rem;
+    text-align: left; 
+    color: #FFE381;  /* 浅色 */
+}
+
+.language-switcher-container {
+    position: absolute; /* 绝对定位 */
+    top: 20px;         /* 距离顶部20像素 */
+    right: 20px;       /* 距离右侧20像素 */
+    z-index: 1000;     /* 确保在其他元素之上 */
+}
+
+.language-option {
+    cursor: pointer;    /* 鼠标指针样式 */
+    color: #FCD34D;     /* 字体颜色 */
+    font-size: 1rem;    /* 字体大小 */
+    margin: 0 5px;      /* 左右间距 */
+    transition: color 0.3s ease; /* 颜色过渡效果 */
+}
+
+.language-option:hover {
+    color: #FFE381;     /* 悬停时的字体颜色 */
+}
+
+/* 只有激活项目后面的一个项目增加上边距 */
+.menu li:has(.menu-link.active) + li {
+    margin-top: 2rem;  /* 激活时增加间距 */
+}
+
+/* 悬停和激活状态都增加间距 */
+.menu li:has(.menu-link:hover) + li,
+.menu li:has(.menu-link.active) + li {
+    margin-top: 1.5rem;  /* 增加间距 */
+}
+
+/* 或者方式2：为 Xiu Xian 封面专门创建一个类 */
+#xiu-xian-section .concept-image {
+    width: 40%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+/* 主页装饰容器 */
+#home-section {
+    height: auto;  /* 添加这行 */
+    min-height: fit-content;  /* 添加这行 */
+    margin-bottom: 0;  /* 添加这行 */
+}
+
+/* The Well 的项目容器 */
+.project-content {
+    width: 720px;
+    max-width: 100%;
+    margin: 0 auto;
+    background: rgba(214, 202, 233, 0.306);
+    border-radius: 16px;
+    padding: 1rem 2rem 1.5rem 2rem;
+}
+
+/* 故事容器通用样式 */
+.story-container {
+    width: 100%;  /* 适应父容器宽度 */
+    margin: 1rem auto;  /* 恢复顶部间距 */
+    padding: 1rem 2rem 1.5rem 2rem;
+    background: rgba(214, 202, 233, 0.306);
+    border-radius: 16px;
+    height: 400px;
+    overflow-y: auto;
+}
+
+/* 确保 More Writing Samples 的项目容器也使用相同的宽度 */
+#more-samples-section .project-content {
+    width: 720px;
+    max-width: 100%;
+    margin: 0 auto;
+    background: rgba(214, 202, 233, 0.306);
+    border-radius: 16px;
+    padding: 1rem 2rem 1.5rem 2rem;
+}
+
+/* 使用更高优先级的选择器 */
+.story-container .story-content,
+.story-container .story-content p,
+.story-container .story-content span {
+    font-size: 0.8rem !important;  /* 使用 !important 来确保优先级 */
+    line-height: 1.8;
+    color: #c7b9dc;
+}
