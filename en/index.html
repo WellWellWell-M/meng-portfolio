@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 设置网页的基本属性 -->
+    <meta charset="UTF-8">
+    <!-- 确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 网页标题 -->
+    <title>have fun</title>
+    <!-- 链接到样式表文件 -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- 设置网页图标 -->
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <!-- 修改 JavaScript 路径 -->
+    <script src="./js/main.js" defer></script>
+    <script src="./js/slider.js" defer></script>
+</head>
+<body>
+    <!-- 把语言切换器移到这里 -->
+    <div class="language-switch">
+        <span>EN</span> | 
+        <a href="../zh/">中文</a>
+    </div>
+
+    <!-- 整个页面的主容器，分为左右两部分 -->
+    <div class="container">
+        <!-- 左侧边栏：包含个人信息和导航菜单 -->
+        <nav class="sidebar">
+            <!-- 头部区域：展示头像和个人简介 -->
+            <div class="header">
+                <!-- 头像容器 -->
+                <div class="avatar">
+                    <img src="./images/avatar.png" alt="Meng's avatar">
+                </div>
+                <!-- 添加链接和cursor样式 -->
+                <div class="intro" style="cursor: pointer;" id="home-link">
+                    <h1>hi I'm Meng</h1>
+                    <div class="description">I want to make games everyone can play</div>
+                </div>
+            </div>
+
+            <!-- 作品导航菜单列表 -->
+            <ul class="menu">
+                <!-- 每个菜单项都包含标题和描述 -->
+                <li>
+                    <!-- active类表示当前选中的项目 -->
+                    <a href="#star-game" class="menu-link active">
+                        <span class="title">Star Game</span>
+                        <span class="description">Solo-developed Web Game</span>
+                    </a>
+                </li>
+                <!-- 其他作品菜单项，结构相同 -->
+                <li>
+                    <a href="#dreams-of-fuyao" class="menu-link">
+                        <span class="title">Dreams of FUYAO</span>
+                        <span class="description">Lead Narrative Designer, MMORPG</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#the-well" class="menu-link">
+                        <span class="title">The WELL</span>
+                        <span class="description">English Short Sci-Fi</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#twin-embroidery" class="menu-link">
+                        <span class="title">Twin Embroidery</span>
+                        <span class="description">Digital Comic Series</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#glorious-girl-band" class="menu-link">
+                        <span class="title">The Glorious Girl Band</span>
+                        <span class="description">Digital Comic Series</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#letter-in-the-night-rain" class="menu-link">
+                        <span class="title">A Letter in the Night Rain</span>
+                        <span class="description">Digital Comic Series</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#xiu-xian" class="menu-link">
+                        <span class="title">In Life, Two Words: Xiu Xian</span>
+                        <span class="description">Original Fantasy Light Novel</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#more-samples" class="menu-link">
+                        <span class="title">More Writing Samples</span>
+                        <span class="description">in Chinese, before 2018</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" class="menu-link">
+                        <span class="title">about me</span>
+                        <span class="description">Experience & Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- 右侧主内容区域 -->
+        <main class="content">
+            <!-- 主页装饰 -->
+            <div class="scroll-container">
+                <img src="images/scroll.png" alt="Ancient scroll with character" class="scroll-image">
+                <span class="scroll-description">and i LOVE zelda!!!</span>
+            </div>
+
+            <!-- Comics and Projects Section -->
+            <div class="project-container">
+                <!-- Star Game 项目展示区域 -->
+                <section id="star-game-section" class="content-section project-content">
+                    <!-- 游戏展示区域 -->
+                    <div class="game-container">
+                        <iframe id="game-frame" src="https://WellWellWell-M.github.io/star-game" allowfullscreen></iframe>
+                        <button class="restart-btn">Restart</button>
+                    </div>
+
+                    <!-- 游戏介绍文本区域 -->
+                    <h3>Overview</h3>
+                    <p>This is a mini game that unfolds across three screens in about two minutes. As my first solo game development project, it marks a special milestone in my coding journey. Over three weeks, I taught myself essential tools - from game engines (GMS, Godot) to AI assistants (Cursor, Midjourney, Stable Diffusion) and version control (GitHub).</p>
+                    
+                    <p>I tried to tell a story about a lonely girl who shoots down stars and encircles them to make them her companions. Eventually, she creates an entire universe - including the Sun, Earth, and Moon - yet remains alone. I wish I had more time to tell the story through gameplay instead of text (and create better artwork - sorry about my poor pixel sprite animation!).</p>
+                    
+                    <p>Though it's far from perfect (quite rough actually), I'm proud to have brought it from concept to playable reality. I chose to omit tutorials, trusting in our natural inclination to play. But here's a small hint if you're wondering how to get <span class="highlight">starTed</span> - </p>
+
+                    <p class="hidden-message">
+                        <span>sometimes you need to draw your own path:)</span>
+                    </p>
+
+                    <h3>Concept Art</h3>
+                    
+                    <div class="concept-art">
+                        <img src="images/concept-art.jpg" alt="Star Game concept art" class="concept-image">
+                        <p>I used Midjourney to create the initial concept art, inspired by Van Gogh's starry nights. Then I ran it through Stable Diffusion to transform it into pixel art - which you'll see in the game's final scene. I had a lot of fun playing with these AI tools and can't wait to experiment more with them in future projects!</p>
+                    </div>
+
+                    <h3>Development</h3>
+                    <div class="development">
+                        <img src="images/development.jpg" alt="Star Game development process" class="development-image">
+                        <p>Though I had great help from Cursor AI as my coding assistant, programming was still the most challenging part of the development process. At first, I needed Cursor to explain every line of code to me. But gradually, I learned to read most of the code and even started tweaking parameters on my own. I have to say, it felt like magic - watching the game respond to my code changes was fascinating! This experience has definitely motivated me to learn more about programming - just like now building my personal portfolio website.</p>
+                    </div>
+                </section>
+
+                <!-- Dreams of FUYAO 项目展示区域 -->
+                <section id="dreams-of-fuyao-section" class="content-section project-content">
+                    <h3>
+                        <a href="https://fyym.37.com.cn/" target="_blank" class="game-title">
+                            Dreams of FUYAO
+                            <span class="link-icon">⤴</span>
+                        </a>
+                    </h3>
+                    
+                    <!-- 第一个视频 -->
+                    <div class="video-container">
+                        <iframe 
+                            width="720" 
+                            height="405" 
+                            src="https://www.youtube.com/embed/pVgCFE0LW2E" 
+                            title="Dreams of FUYAO Gameplay 1"
+                            frameborder="0" 
+                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="introduction">
+                        <h3>Note</h3>                        
+                        <p>Dreams of FUYAO centers on women's awakening, with its story told primarily through the female protagonist's perspective. The teaser adopts this same narrative approach.</p>
+                        
+                        <p>In the trailer, I focused on highlighting several layers of conflict: the tension between a seemingly prosperous nation and its underlying social unrest; the external conflict between the protagonist's ambition for power and the era's expectations of women; and the internal struggle of the protagonist as she faces obstacles in her growth and advancement.</p>
+                        
+                        <p>These conflicts are woven together through both narrative and visual elements. A key sequence I designed shows the protagonist's transformation: betrayed and sinking into water—a metaphor for despair—she ultimately opens her eyes again, emerging stronger than before. This moment symbolizes her awakening and self-empowerment.</p>
+                        
+                        <p>Through this interplay of story and visuals, I hope to spark players' curiosity about how these conflicts will be resolved and build anticipation for the story ahead.</p>
+                    </div>
+
+                    <!-- 第二个视频 -->
+                    <div class="video-container">
+                        <iframe 
+                            width="720" 
+                            height="405" 
+                            src="https://www.youtube.com/embed/iw0nIek8Gtk" 
+                            title="Dreams of FUYAO Gameplay 2"
+                            frameborder="0" 
+                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="introduction">
+                        <h3>Note</h3>
+                        <p>As the lead narrative designer and visual supervisor, I directed this opening cinematic to immerse players in the world of Dreams of FUYAO.</p>
+                        
+                        <p>Visually, we merged traditional ink painting with gold-line techniques, symbolizing the fusion of classical settings (a feudal dynasty) with modern themes (women's awakening). Working closely with animators, we crafted several meaningful shots—such as when narrating Chancellor Duan's rise to power with public support, the camera descends from his feet to a battlefield littered with corpses, creating a visual counterpoint to the narrative that invites players to question the story's deeper implications.</p>
+                        
+                        <p>Narratively, the cinematic sets the stage by introducing the world and its initial conflict: how will our protagonist confront the Academy's fall from grace? It also subtly weaves in Hua Cijing—not just a figure of the past, but a character whose journey parallels the protagonist's, together embodying the central exploration of women's awakening.</p>
+                    </div>
+
+                    <!-- 第三个视频 -->
+                    <div class="video-container">
+                        <iframe 
+                            width="720" 
+                            height="405" 
+                            src="https://www.youtube.com/embed/Eb_eBkAWGkc" 
+                            title="Dreams of FUYAO Gameplay 3"
+                            frameborder="0" 
+                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="introduction">
+                        <h3>Note</h3>
+                        <p>This is the character trailer for Hua Cijing—a pivotal antagonist whose journey intertwines with the protagonist's, like two reflections in a mirror, one inside and one outside, in Dreams of FUYAO.</p>
+                        
+                        <p>Hua Cijing's story draws from a long-standing literary tradition, such as the Qing Dynasty's Destiny of Rebirth, where talented women rise to power only to face inevitable constraints. To reflect this parallel and highlight her character's unique presence, I incorporated elements of Chinese opera rather than conventional monologues.</p>
+                        
+                        <p>Unlike her literary predecessors, Hua Cijing shatters the mold with her relentless defiance against fate. Her conflict with the protagonist represents two opposing approaches to shared struggles: radical upheaval versus measured reformation. Their parallel journeys—one dismantling the system, the other striving to mend it—add depth to the narrative, transforming personal tragedy into a broader allegory of power, idealism, and the choices women face in defining their own paths.</p>
+                    </div>
+                </section>
+
+                <!-- The WELL 项目展示区域 -->
+                <section id="the-well-section" class="content-section project-content">
+                    <div class="story-container">
+                        <div class="story-content" id="well-content">
+                            <!-- 文章内容将通过JavaScript动态加载 -->
+                        </div>
+                    </div>
+
+                    <!-- Afterword部分 -->
+                    <h3>Afterword</h3>
+                    <p>This story holds special significance for me, not only as my first attempt at writing in English but as a journey into self-discovery. For years, I excelled at commercial writing - analyzing markets, audience needs, and project requirements. Yet when I finally set aside all commercial considerations and ventured into my own heart, I discovered a well had been there all along.</p>
+                    
+                    <p>In rural China, wells hold ancient mysteries. Every village seems to harbor tales of women who, in moments of despair, leapt into wells, their spirits lingering as haunting presences in the dark waters below.</p>
+                    
+                    <p>As a child, these stories made me fear wells. They seemed to embody life's troubles - like drawing water from their depths, each attempt to resolve one problem only revealed more beneath. But years later, I encountered a story about African village women that changed my perspective. Though NGOs had installed modern water systems in their communities, many women still chose to visit the wells. It was their sanctuary, the one place where they could leave their families and be themselves.</p>
+                    
+                    <p>This revelation transformed my understanding. What I had seen as an endless source of pain was actually a wellspring of solace - for most women, the world itself has often been the source of suffering.</p>
+                    
+                    <p>I created this story because women seem to always be searching for their own wells, as the world beyond belongs to men. As Simone de Beauvoir observed in The Second Sex: "The wonderful thing about man - in adolescence and maturity - is that he is not destined; the word 'destiny' has a different resonance for boys and girls. The more a boy grows and develops, the more he opens his adventure into the world and the more he is called to surpass himself. Meanwhile, the girl will discover that the world is limited, she will learn that she is destined for man, and she will dream not of surpassing herself but of finding happiness."</p>
+                </section>
+
+                <!-- Twin Embroidery Section -->
+                <section id="twin-embroidery-section" class="content-section project-content">
+                    <h3>
+                        <a href="https://www.kuaikanmanhua.com/web/topic/3121/" target="_blank" class="game-title">
+                            Twin Embroidery
+                            <span class="link-icon">⤴</span>
+                        </a>
+                    </h3>
+
+                    <div class="slider-container">
+                        <button class="slider-button prev" aria-label="Previous image">❮</button>
+                        <div class="slider-track">
+                            <div class="slider-image">
+                                <img src="images/twin-embroidery/slide-1.jpg" alt="Twin Embroidery - Scene 1">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/twin-embroidery/slide-2.jpg" alt="Twin Embroidery - Scene 2">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/twin-embroidery/slide-3.jpg" alt="Twin Embroidery - Scene 3">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/twin-embroidery/slide-4.jpg" alt="Twin Embroidery - Scene 4">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/twin-embroidery/slide-5.jpg" alt="Twin Embroidery - Scene 5">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/twin-embroidery/slide-6.jpg" alt="Twin Embroidery - Scene 6">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/twin-embroidery/slide-7.jpg" alt="Twin Embroidery - Scene 7">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/twin-embroidery/slide-8.jpg" alt="Twin Embroidery - Scene 8">
+                            </div>
+                        </div>
+                        <button class="slider-button next" aria-label="Next image">❯</button>
+                    </div>
+
+                    <div class="introduction">
+                        <h3>Note</h3>
+                        <p>Among all Chinese cities, Suzhou holds a special place in my heart as the one that best embodies traditional classical beauty.</p>
+                        
+                        <p>After embarking on my digital nomad journey, I planned to spend a year in Suzhou, seeking inspiration from the city. This decision eventually led to the creation of Twin Embroidery, a work centered around the art of Suzhou double-sided embroidery.</p>
+                        
+                        <p>This ancient and remarkable craft allows masters to use incredibly fine threads to create two distinct yet equally intricate images on opposite sides of a single piece of silk. The technique beautifully mirrors the theme of my story: a seemingly strong woman unable to escape the shadows of her past. She initially learns double-sided embroidery in the hope of stitching a new self over her scarred past.</p>
+                        
+                        <p>However, like the two sides of an embroidered piece, she comes to understand that both her strength and her scars are integral to who she is. Through love and art, she ultimately learns to embrace her whole self.</p>
+                    </div>
+                </section>
+
+                <!-- The Glorious Girl Band Section -->
+                <section id="glorious-girl-band-section" class="content-section project-content">
+                    <h3>
+                        <a href="https://www.manmanapp.com/comic-1403985.html" target="_blank" class="game-title">
+                            The Glorious Girl Band
+                            <span class="link-icon">⤴</span>
+                        </a>
+                    </h3>
+
+                    <div class="slider-container">
+                        <button class="slider-button prev" aria-label="Previous image">❮</button>
+                        <div class="slider-track">
+                            <div class="slider-image">
+                                <img src="images/glorious-girl-band/slide-1.jpg" alt="The Glorious Girl Band - Scene 1">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/glorious-girl-band/slide-2.jpg" alt="The Glorious Girl Band - Scene 2">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/glorious-girl-band/slide-3.jpg" alt="The Glorious Girl Band - Scene 3">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/glorious-girl-band/slide-4.jpg" alt="The Glorious Girl Band - Scene 4">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/glorious-girl-band/slide-5.jpg" alt="The Glorious Girl Band - Scene 5">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/glorious-girl-band/slide-6.jpg" alt="The Glorious Girl Band - Scene 6">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/glorious-girl-band/slide-7.jpg" alt="The Glorious Girl Band - Scene 7">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/glorious-girl-band/slide-8.jpg" alt="The Glorious Girl Band - Scene 8">
+                            </div>
+                        </div>
+                        <button class="slider-button next" aria-label="Next image">❯</button>
+                    </div>
+
+                    <div class="introduction">
+                        <h3>Note</h3>
+                        <p>The Glorious Girl Band is my first serialized comic, born from a simple yet bold idea: a rock band of talented young women in ancient China.</p>
+                        
+                        <p>Set in an idealized historical world free from traditional constraints, the story follows seven uniquely gifted girls as they come together to form an unconventional, wonderfully chaotic band. Their adventures weave Chinese tradition with the raw energy of rock music, creating something entirely fresh and unexpected.</p>
+                        
+                        <p>This isn't a story about oppression or struggle—it's a celebration of creativity, friendship, and the sheer joy of making music together. While such freedom might exist only in this fantasy world, that's precisely why I wanted these characters to shine as brightly as possible on their imaginary stage.</p>
+                        
+                        <p>They roar their songs to the world—not as cries of despair, but with a power that sometimes moves me to tears even more deeply than sorrow.</p>
+                    </div>
+                </section>
+
+                <!-- A Letter in the Night Rain Section -->
+                <section id="letter-in-the-night-rain-section" class="content-section project-content">
+                    <h3>
+                        <a href="https://www.iqiyi.com/manhua/detail_18yzmpfm5x.html" target="_blank" class="game-title">
+                            A Letter in the Night Rain
+                            <span class="link-icon">⤴</span>
+                        </a>
+                    </h3>
+
+                    <div class="slider-container">
+                        <button class="slider-button prev" aria-label="Previous image">❮</button>
+                        <div class="slider-track">
+                            <div class="slider-image">
+                                <img src="images/letter-night-rain/slide-1.jpg" alt="A Letter in the Night Rain - Scene 1">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/letter-night-rain/slide-2.jpg" alt="A Letter in the Night Rain - Scene 2">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/letter-night-rain/slide-3.jpg" alt="A Letter in the Night Rain - Scene 3">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/letter-night-rain/slide-4.jpg" alt="A Letter in the Night Rain - Scene 4">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/letter-night-rain/slide-5.jpg" alt="A Letter in the Night Rain - Scene 5">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/letter-night-rain/slide-6.jpg" alt="A Letter in the Night Rain - Scene 6">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/letter-night-rain/slide-7.jpg" alt="A Letter in the Night Rain - Scene 7">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/letter-night-rain/slide-8.jpg" alt="A Letter in the Night Rain - Scene 8">
+                            </div>
+                        </div>
+                        <button class="slider-button next" aria-label="Next image">❯</button>
+                    </div>
+
+                    <div class="introduction">
+                        <h3>Note</h3>
+                        <p>A Letter in the Night Rain draws inspiration from Li Shangyin's classical Tang dynasty poem of the same title:</p>
+                        
+                        <blockquote>
+                            <div class="chinese-poem">
+                                君问归期未有期， 巴山夜雨涨秋池。<br>
+                                何当共剪西窗烛， 却话巴山夜雨时。
+                            </div>
+                            <div class="english-translation">
+                                You ask me when I'll return, but I cannot say,<br>
+                                As autumn rain fills pools on Mount Ba in the night.<br>
+                                When will we trim wicks by the western window again,<br>
+                                And speak of this night rain on Mount Ba?
+                            </div>
+                        </blockquote>
+                        
+                        <p>The comic expands the poem's yearning and melancholy into a political drama set in ancient China. Each chapter opens with an excerpt from a letter written on a rainy night, serving both as a chapter summary and thematic framework. The story begins thus:</p>
+                        
+                        <blockquote class="letter">
+                            <span class="chinese-text">凌弟台鉴，寒灯夜雨，怀人倍切。愚兄凭窗而叹，忆及明成十年与弟京郊初晤，竟恍然如昨。</span>
+                            Dear Brother Ling, On this rainy night, by the cold lamp's light, my longing for you grows ever deeper. As I lean against the window, lost in thought, I recall our first meeting on the outskirts of the capital ten years ago—it feels like only yesterday...
+                        </blockquote>
+                        
+                        <p>This nested narrative structure allows the letter to unfold gradually across time, each carefully chosen phrase revealing a crucial moment as two close friends grow apart.</p>
+                        
+                        <p>At its heart, this is a story about kindred spirits—two like-minded friends ultimately separated by their different political ideals. After they both achieve their ambitions, one writes this letter in an attempt to salvage their friendship, unaware it would become his final words.</p>
+                    </div>
+                </section>
+
+                <!-- In Life, Two Words: Xiu Xian Section -->
+                <section id="xiu-xian-section" class="content-section project-content">
+                    <h3>
+                        <a href="https://www.migu.cn/read/detail/1200300000000162852.html" target="_blank" class="game-title">
+                            In Life, Two Words: Xiu Xian
+                            <span class="link-icon">⤴</span>
+                        </a>
+                    </h3>
+
+                    <!-- 封面图片区域 -->
+                    <div class="novel-cover">
+                        <img src="images/xiu-xian/cover.jpg" alt="Xiu Xian novel cover">
+                        <div class="introduction">
+                            <h3>Overview</h3>
+                            <p>After joining the Yunlai Sect, Xia Fan finally heard his fellow disciples discussing the mysteries of the Two-Character Cultivation Mantra—a unique, two-word principle said to guide one's path to enlightenment. It was the ultimate opportunity, enough to drive all cultivators mad. Only true prodigies, chosen by Heaven, could comprehend their own mantra.</p>
+
+                            <p>Within the entire Yunlai Sect, only the noble and otherworldly senior sister had been blessed with such a destiny.</p>
+
+                            <p>"So, what is the Two-Character Cultivation Mantra of our noble and otherworldly senior sister?" Xia Fan asked.</p>
+
+                            <p style="margin-bottom: 2em;">Senior brother: "Slaughter pigs."</p>
+
+                            <p>In this unconventional cultivation world, there exists a fateful opportunity known as the Two-Character Cultivation Mantra. By following its guidance, one can rapidly advance their cultivation and ascend to immortality. Yet every mantra, though unique, is seen as a curse. It forces the kind-hearted to kill, the loyal to betray, and the affectionate to forget love.</p>
+
+                            <p>"Can Heaven truly be wrong?"</p>
+
+                            <p>Told with a lighthearted tone, this story follows a group of idealistic youths as they struggle against the burning flames of destiny, using nothing but their courage, conviction, and mortal flesh to challenge the will of Heaven.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- About Section -->
+                <section id="about-section" class="content-section project-content">
+                    <!-- 工作经历 -->
+                    <div class="about-card">
+                        <h2>Experience</h2>
+                        <div class="experience-item">
+                            <div class="year">2021-2024</div>
+                            <div class="job-title">37 Games | Narrative Team Lead </div>
+                            <div class="project-name">Dreams of FUYAO, MMORPG</div>
+                        </div>
+                        <div class="experience-item">
+                            <div class="year">2016-2020</div>
+                            <div class="job-title">Full-time Writer | Comic Script Writer & Novelist</div>
+                        </div>
+                    </div>
+
+                    <!-- 联系方式 -->
+                    <div class="about-card">
+                        <h2>Contact</h2>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:luisemeng1994@gmail.com">luisemeng1994@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+86 182-7091-7675</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-link"></i>
+                                <a href="https://bsky.app/profile/luisemeng.bsky.social" target="_blank">@luisemeng.bsky.social</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- More Writing Samples Section -->
+                <section id="more-samples-section" class="content-section project-content">
+                    <!-- 第一个故事 -->
+                    <h3>日式轻小说</h3>
+                    <div class="story-container">
+                        <div class="story-content" id="story-content-1">
+                            <!-- 内容将通过JavaScript动态加载 -->
+                        </div>
+                    </div>
+
+                    <!-- 第二个故事 -->
+                    <h3>欧风软科幻</h3>
+                    <div class="story-container">
+                        <div class="story-content" id="story-content-2">
+                            <!-- 内容将通过JavaScript动态加载 -->
+                        </div>
+                    </div>
+
+                    <!-- 第三个故事 -->
+                    <h3>古风吐槽</h3>
+                    <div class="story-container">
+                        <div class="story-content" id="story-content-3">
+                            <!-- 内容将通过JavaScript动态加载 -->
+                        </div>
+                    </div>
+
+                    <!-- 第四个故事 -->
+                    <h3>古风正剧</h3>
+                    <div class="story-container">
+                        <div class="story-content" id="story-content-4">
+                            <!-- 内容将通过JavaScript动态加载 -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- JavaScript代码部分 -->
+    <script>
+        // 获取所有需要的元素
+        const homeLink = document.getElementById('home-link');
+        const scrollContainer = document.querySelector('.scroll-container');
+        const contentSections = document.querySelectorAll('.content-section');
+        const menuLinks = document.querySelectorAll('.menu-link');
+
+        // 显示主页内容的函数
+        function showHome() {
+            // 显示塞尔达图片
+            scrollContainer.style.display = 'block';
+            // 隐藏所有项目内容
+            contentSections.forEach(section => {
+                section.classList.remove('active');
+            });
+            // 移除所有菜单项的激活状态
+            menuLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+        }
+
+        // 点击个人介绍时返回主页
+        homeLink.addEventListener('click', showHome);
+
+        // 修改菜单点击事件处理
+        document.querySelectorAll('.menu-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // 隐藏塞尔达图片
+                scrollContainer.style.display = 'none';
+                
+                // 移除所有链接和区块的active类
+                menuLinks.forEach(l => l.classList.remove('active'));
+                contentSections.forEach(section => {
+                    section.classList.remove('active');
+                });
+                
+                // 为点击的链接添加active类
+                link.classList.add('active');
+                
+                // 显示对应的区块
+                const sectionId = link.getAttribute('href').substring(1) + '-section';
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    section.classList.add('active');
+                    // 如果是The WELL页面，加载内容
+                    if (sectionId === 'the-well-section') {
+                        loadStoryContent();
+                    }
+                }
+            });
+        });
+
+        // 初始显示主页
+        showHome();
+
+        // 重启游戏按钮功能
+        document.querySelector('.restart-btn')?.addEventListener('click', () => {
+            const gameFrame = document.getElementById('game-frame');
+            // 通过重新加载iframe来重启游戏
+            gameFrame.src = gameFrame.src;
+        });
+
+        // 添加加载故事内容的函数
+        async function loadStoryContent() {
+            try {
+                const response = await fetch('content/well-content.html');
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const content = await response.text();
+                
+                // 简化HTML结构，移除作者信息
+                const formattedContent = `
+                    <div class="story-content">
+                        <h1>The WELL</h1>
+                        ${content.split('\n\n').map(paragraph => 
+                            paragraph.trim() ? `<p>${paragraph.trim()}</p>` : ''
+                        ).join('')}
+                    </div>
+                `;
+                
+                document.getElementById('well-content').innerHTML = formattedContent;
+                
+            } catch (error) {
+                console.error('Error loading story content:', error);
+                document.getElementById('well-content').innerHTML = 
+                    `<p>Error loading content: ${error.message}</p>`;
+            }
+        }
+    </script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

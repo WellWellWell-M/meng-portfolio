@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 设置网页的基本属性 -->
+    <meta charset="UTF-8">
+    <!-- 确保页面在移动设备上正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 网页标题 -->
+    <title>have fun</title>
+    <!-- 链接到样式表文件 -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- 设置网页图标 -->
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <!-- 修改 JavaScript 路径 -->
+    <script src="./js/main.js" defer></script>
+    <script src="./js/slider.js" defer></script>
+</head>
+<body>
+    <!-- 把语言切换器移到这里 -->
+    <div class="language-switch">
+        <a href="../en/">EN</a> | 
+        <span>中文</span>
+    </div>
+
+    <!-- 整个页面的主容器，分为左右两部分 -->
+    <div class="container">
+        <!-- 左侧边栏：包含个人信息和导航菜单 -->
+        <nav class="sidebar">
+            <!-- 头部区域：展示头像和个人简介 -->
+            <div class="header">
+                <!-- 头像容器 -->
+                <div class="avatar">
+                    <img src="./images/avatar.png" alt="Meng's avatar">
+                </div>
+                <!-- 添加链接和cursor样式 -->
+                <div class="intro" style="cursor: pointer;" id="home-link">
+                    <h1>廖梦</h1>
+                    <div class="description">我想设计每个人都能玩的游戏</div>
+                </div>
+            </div>
+
+            <!-- 作品导航菜单列表 -->
+            <ul class="menu">
+                <!-- 每个菜单项都包含标题和描述 -->
+                <li>
+                    <!-- active类表示当前选中的项目 -->
+                    <a href="#star-game" class="menu-link active">
+                        <span class="title">Star Game</span>
+                        <span class="description">独立开发网页游戏</span>
+                    </a>
+                </li>
+                <!-- 其他作品菜单项，结构相同 -->
+                <li>
+                    <a href="#dreams-of-fuyao" class="menu-link">
+                        <span class="title">扶摇一梦</span>
+                        <span class="description">主文案，MMORPG</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#the-well" class="menu-link">
+                        <span class="title">The WELL</span>
+                        <span class="description">英文科幻短篇</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#twin-embroidery" class="menu-link">
+                        <span class="title">双绣</span>
+                        <span class="description">现代都市职业漫画</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#glorious-girl-band" class="menu-link">
+                        <span class="title">盛世女团</span>
+                        <span class="description">轻玄幻摇滚漫画</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#letter-in-the-night-rain" class="menu-link">
+                        <span class="title">夜雨寄北</span>
+                        <span class="description">双男主权谋漫画</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#xiu-xian" class="menu-link">
+                        <span class="title">人生在世，修仙二字</span>
+                        <span class="description">原创设定轻小说</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#more-samples" class="menu-link">
+                        <span class="title">更多文风参考</span>
+                        <span class="description">2016-2018，较早期作品</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" class="menu-link">
+                        <span class="title">关于我</span>
+                        <span class="description">经历&联系方式</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- 右侧主内容区域 -->
+        <main class="content">
+            <!-- 主页装饰 -->
+            <div class="scroll-container">
+                <img src="images/scroll.png" alt="Ancient scroll with character" class="scroll-image">
+                <span class="scroll-description">就像塞尔达！</span>
+            </div>
+
+            <!-- Comics and Projects Section -->
+            <div class="project-container">
+                <!-- Star Game 项目展示区域 -->
+                <section id="star-game-section" class="content-section project-content">
+                    <!-- 游戏展示区域 -->
+                    <div class="game-container">
+                        <iframe id="game-frame" src="https://WellWellWell-M.github.io/star-game" allowfullscreen></iframe>
+                        <button class="restart-btn">Restart</button>
+                    </div>
+
+                    <!-- 游戏介绍文本区域 -->
+                    <h3>概述</h3>
+                    <p>虽然是一个只有三幕的迷你游戏，但作为我的第一个独立游戏开发项目，它对我而言意义重大。在三周内，我自学了各种工具——从游戏引擎（GMS、Godot）到人工智能助手（Cursor、Midjourney、Stable Diffusion）以及版本控制（GitHub）。</p>
+                    
+                    <p>游戏试图讲述一个有点寂寞的故事：女孩用弹弓打下星星，然后用轨道圈住它们来陪伴自己，直到创造出整个宇宙——却依然孤独。</p>
+                    
+                    <p>为了保留乐趣，我没有设置引导，但如果你还没有 <span class="highlight">starT</span> game，这里有一个小提示：</p>
+
+                    <p class="hidden-message">
+                        <span>是的，STAR后面写一个T……</span>
+                    </p>
+                    
+                    <div class="concept-art">
+                        <img src="images/concept-art.jpg" alt="Star Game concept art" class="concept-image">
+                        <p>我用Midjourney生成了这张初始视觉图，素材混合了梵高的星空。然后再用Stable Diffusion把它转换成像素风格，用在游戏的最后一幕。</p>
+                    </div>
+
+                    <div class="development">
+                        <img src="images/development.jpg" alt="Star Game development process" class="development-image">
+                        <p>虽然有Cursor的帮助，但最难的依然是开发过程。难的当然不是功能实现，而是Debug。我现在在自学python——就像学英语一样，目标不是成为母语者，而是能够借助AI流畅使用。</p>
+                    </div>
+                </section>
+
+                <!-- Dreams of FUYAO 项目展示区域 -->
+                <section id="dreams-of-fuyao-section" class="content-section project-content">
+                    <h3>
+                        <a href="https://fyym.37.com.cn/" target="_blank" class="game-title">
+                            扶摇一梦
+                            <span class="link-icon">⤴</span>
+                        </a>
+                    </h3>
+                    
+                    <!-- 第一个视频 -->
+                    <div class="video-container">
+                        <iframe 
+                            width="720" 
+                            height="405" 
+                            src="https://www.youtube.com/embed/pVgCFE0LW2E" 
+                            title="Dreams of FUYAO Gameplay 1"
+                            frameborder="0" 
+                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="introduction">
+                        <p>预告片重点展现了几层冲突：看似繁荣的朝代和其中潜藏的危机；女主追求和外在社会观念的背离；以及女主个人的内心挣扎。这些冲突彼此交织，形成故事的主线。</p>  
+                    </div>
+
+                    <!-- 第二个视频 -->
+                    <div class="video-container">
+                        <iframe 
+                            width="720" 
+                            height="405" 
+                            src="https://www.youtube.com/embed/iw0nIek8Gtk" 
+                            title="Dreams of FUYAO Gameplay 2"
+                            frameborder="0" 
+                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="introduction">
+                        <p>这是扶摇的开篇背景动画，主要用来展开世界观，和构建初始剧情冲突：女主所在的南山书院已经没落，而她就要从这里出发，开启自己荆棘遍布的青云之路。</p>
+                        <p>我同时在这个开篇里埋下了花辞镜的伏笔，她是故事的另一个重要角色，某种程度上作为女主的镜像存在。</p>                                                                                                
+                    </div>
+
+                    <!-- 第三个视频 -->
+                    <div class="video-container">
+                        <iframe 
+                            width="720" 
+                            height="405" 
+                            src="https://www.youtube.com/embed/Eb_eBkAWGkc" 
+                            title="Dreams of FUYAO Gameplay 3"
+                            frameborder="0" 
+                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="introduction">
+                        <p>这是花辞镜的角色动画和人物判词。</p> 
+                        <p>从</p> 
+                        <blockquote>
+                            <span class="chinese-poem">
+                                存天下之志，妇孺可称国士。<br>
+                                鸣苍生之愿，雏凤纵声啸日。
+                            </span>
+                        </blockquote>
+                        
+                        <p>到</p> 
+                        
+                        <blockquote class="letter">
+                            <span class="chinese-poem">
+                                三十年假凤虚凰，伪君子入得真朝堂。<br>
+                                乌纱悬梁，巾帼入箱。<br>
+                                我自是无君无父，欺天罔上。<br>
+                                我亦见山河万里，皓月明光。<br>
+                                此去探汤蹈火，何惧，何妨？
+                            </span>
+                        </blockquote>
+                        
+                        <p>作为主角之前的上一任南山首席，花辞镜和主角有过同样的抱负，不同的是她经历了更惨烈的背叛，也做出了更决然的选择。这两个角色互为对手，也彼此映照，共同铺下了扶摇的底色。</p>
+                        
+                    </div>
+                </section>
+
+                <!-- The WELL 项目展示区域 -->
+                <section id="the-well-section" class="content-section project-content">
+                    <div class="story-container">
+                        <div class="story-content" id="well-content">
+                            <!-- 文章内容将通过JavaScript动态加载 -->
+                        </div>
+                    </div>
+
+                    <!-- Afterword部分 -->
+                    <h3>Afterword</h3>                    
+                    <p>这是我第一次尝试使用英文写作（当然，在ChatGPT的协助下）。</p>
+                    <p>在走出语言和文化的隔阂后，我发现故事真正能打动人的依然是角色和情感。</p>
+                    <p>我希望通过这个故事记录一直以来对自我女性身份的困惑和思考。</p>
+                    <p>至于为什么选择井作为主题，则要提到一个认知的转变。</p>
+                    <p>每个中国小孩都听过井里的女鬼的故事，长大后才知道鬼故事来自于现实。小时候我不喜欢井，总觉得井水就像麻烦，打完一桶新的一桶又冒出来，人生永远无法获得真正的平静。直到几年前看了一条非洲的新闻：NGO给那里的村子安装了现代化水系统，但女性们却因此抗议，因为她们更愿意去井边打水——每天早晚的取水之行，是她们唯一可以离开家庭，成为自己的地方。</p>
+                    <p>我突然发现，原来对女性而言，快乐才是这口小小的井，而痛苦则是剩下的整个世界。就如波伏娃所说：</p>
+                    <blockquote class="letter">
+                        <span class="chinese-text">The wonderful thing about man - in adolescence and maturity - is that he is not destined; the word "destiny" has a different resonance for boys and girls. The more a boy grows and develops, the more he opens his adventure into the world and the more he is called to surpass himself. Meanwhile, the girl will discover that the world is limited, she will learn that she is destined for man, and she will dream not of surpassing herself but of finding happiness.</span>
+                        <span class="chinese-text">对于男人而言，最大的优势是——在青春期和成年后——他们的命运不会被注定；“命运”这个词对男孩和女孩有着不同的意义。男孩越是长大，世界就越向他敞开冒险之门，不断召唤他去超越自我。与此同时，女孩却会发现世界是有限的，她会认识到自己命中注定是为了男人而存在，她梦想的不是超越自我，而是寻找幸福。</span>
+                    </blockquote>
+                </section>
+
+                <!-- Twin Embroidery Section -->
+                <section id="twin-embroidery-section" class="content-section project-content">
+                    <h3>
+                        <a href="https://www.kuaikanmanhua.com/web/topic/3121/" target="_blank" class="game-title">
+                            双绣
+                            <span class="link-icon">⤴</span>
+                        </a>
+                    </h3>
+
+                    <div class="slider-container">
+                        <button class="slider-button prev" aria-label="Previous image">❮</button>
+                        <div class="slider-track">
+                            <div class="slider-image">
+                                <img src="images/twin-embroidery/slide-1.jpg" alt="Twin Embroidery - Scene 1">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/twin-embroidery/slide-2.jpg" alt="Twin Embroidery - Scene 2">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/twin-embroidery/slide-3.jpg" alt="Twin Embroidery - Scene 3">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/twin-embroidery/slide-4.jpg" alt="Twin Embroidery - Scene 4">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/twin-embroidery/slide-5.jpg" alt="Twin Embroidery - Scene 5">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/twin-embroidery/slide-6.jpg" alt="Twin Embroidery - Scene 6">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/twin-embroidery/slide-7.jpg" alt="Twin Embroidery - Scene 7">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/twin-embroidery/slide-8.jpg" alt="Twin Embroidery - Scene 8">
+                            </div>
+                        </div>
+                        <button class="slider-button next" aria-label="Next image">❯</button>
+                    </div>
+
+                    <div class="introduction">
+                        <p>自由职业期间，我曾经计划每个城市居住一年，同时写一个和对应城市有关的故事。但最后真正写出来的只有这部漫画，关于苏州和苏绣。</p>
+                        
+                        <p>苏式双面绣是天然的故事载体，因为它可以在同一片薄薄丝绢的两面展现两种截然不同的图案——像一个立体又矛盾的角色。</p>
+
+                        <p>所以我用它来塑造了女主角，她想借助双面绣来掩埋过往，但最终选择了接受完整的自我。</p>
+                        
+                        <p>在时尚娱乐圈和古典刺绣艺术的双重外衣包裹下，这个故事归根结底，是关于个体的挣扎和救赎，关于如何在自我与外界复杂交错的矛盾之间达成一定的平衡与和解。</p>
+                    </div>
+                </section>
+
+                <!-- The Glorious Girl Band Section -->
+                <section id="glorious-girl-band-section" class="content-section project-content">
+                    <h3>
+                        <a href="https://www.manmanapp.com/comic-1403985.html" target="_blank" class="game-title">
+                            盛世女团
+                            <span class="link-icon">⤴</span>
+                        </a>
+                    </h3>
+
+                    <div class="slider-container">
+                        <button class="slider-button prev" aria-label="Previous image">❮</button>
+                        <div class="slider-track">
+                            <div class="slider-image">
+                                <img src="images/glorious-girl-band/slide-1.jpg" alt="The Glorious Girl Band - Scene 1">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/glorious-girl-band/slide-2.jpg" alt="The Glorious Girl Band - Scene 2">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/glorious-girl-band/slide-3.jpg" alt="The Glorious Girl Band - Scene 3">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/glorious-girl-band/slide-4.jpg" alt="The Glorious Girl Band - Scene 4">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/glorious-girl-band/slide-5.jpg" alt="The Glorious Girl Band - Scene 5">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/glorious-girl-band/slide-6.jpg" alt="The Glorious Girl Band - Scene 6">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/glorious-girl-band/slide-7.jpg" alt="The Glorious Girl Band - Scene 7">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/glorious-girl-band/slide-8.jpg" alt="The Glorious Girl Band - Scene 8">
+                            </div>
+                        </div>
+                        <button class="slider-button next" aria-label="Next image">❯</button>
+                    </div>
+
+                    <div class="introduction">
+                        <p>这是我的第一部商业连载漫画，灵感来源于一个非常简单的想法：写一个古风背景下的摇滚女团群像。</p>
+                        <p>因为设定很离谱，所以反而写得很开心。</p>
+                        <p>故事没有太多的严肃思考，只是少女们边唱歌边展开的冒险，可以把它当作一部古代公路片。</p>
+                    </div>
+                </section>
+
+                <!-- A Letter in the Night Rain Section -->
+                <section id="letter-in-the-night-rain-section" class="content-section project-content">
+                    <h3>
+                        <a href="https://www.iqiyi.com/manhua/detail_18yzmpfm5x.html" target="_blank" class="game-title">
+                            夜雨寄北
+                            <span class="link-icon">⤴</span>
+                        </a>
+                    </h3>
+
+                    <div class="slider-container">
+                        <button class="slider-button prev" aria-label="Previous image">❮</button>
+                        <div class="slider-track">
+                            <div class="slider-image">
+                                <img src="images/letter-night-rain/slide-1.jpg" alt="A Letter in the Night Rain - Scene 1">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/letter-night-rain/slide-2.jpg" alt="A Letter in the Night Rain - Scene 2">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/letter-night-rain/slide-3.jpg" alt="A Letter in the Night Rain - Scene 3">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/letter-night-rain/slide-4.jpg" alt="A Letter in the Night Rain - Scene 4">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/letter-night-rain/slide-5.jpg" alt="A Letter in the Night Rain - Scene 5">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/letter-night-rain/slide-6.jpg" alt="A Letter in the Night Rain - Scene 6">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/letter-night-rain/slide-7.jpg" alt="A Letter in the Night Rain - Scene 7">
+                            </div>
+                            <div class="slider-image">
+                                <img src="images/letter-night-rain/slide-8.jpg" alt="A Letter in the Night Rain - Scene 8">
+                            </div>
+                        </div>
+                        <button class="slider-button next" aria-label="Next image">❯</button>
+                    </div>
+
+                    <div class="introduction">
+                        <p>《夜雨寄北》的灵感来自于李商隐的同名诗。</p>
+                        
+                        <blockquote>
+                            <div class="chinese-poem">
+                                君问归期未有期， 巴山夜雨涨秋池。<br>
+                                何当共剪西窗烛， 却话巴山夜雨时。
+                            </div>
+                        </blockquote>
+                        
+                        <p>故事起于一封在雨夜写下的书信，它既是引子也是主线大纲，信里每句话都对应一个核心情节：</p>
+                        
+                        <blockquote class="letter">
+                            <span class="chinese-text">
+                                凌弟台鉴，寒灯夜雨，怀人倍切。愚兄凭窗而叹，忆及明成十年与弟京郊初晤，竟恍然如昨。<br>
+                                
+                                时值仲春，二人携手遍游京华，斟十分酒，赏半城花。几度高台纵饮，放歌于亭，经年漫灭，少时豪情。<br>
+                                
+                                后春闱榜下，吾与汝并肩踏马长安，可谓人生得意，箫鼓尽欢。<br>
+                                
+                                不意时乖命蹇，谓之物盛而当杀。眼见朝内权奸当道，圣人受制，为臣者有心杀贼，无力回天，岂不痛哉？<br>
+                                
+                                或曰：君子居其位，则思死其官。愚兄效命于今上，受禄于朝廷，欲达非常之功，焉敢另求自全之计？<br>
+                                
+                                彼世之清流，所守者道义，所行者忠信，所惜者名节，好立异以为高，逆情以干誉，实不堪其用也。<br>
+                                
+                                与其有誉于前，孰若无毁于其后。朝中党患既成，盘根错节，则惟有舍道义、弃忠信而捐名节，势将其拔之而俱起，除之而后快。若忧谗畏讥，则大事难成矣。是谓卒然临之而不惊，无故加之而不怒者，非勇也，所图者甚也。<br>
+                                
+                                惜乎瞒天过海，吾又何惧，惟慕弟之高义，而心有所碍。弟为直臣，奋勇当先，然内情多溢于言表，恐负天子重托。故不曾具实以告，令弟忧结于心，是兄之过。夙夜兴叹，终不得解。<br>
+                                
+                                人言仕宦而至将相，富贵而归故乡，古今一理也。吾三起三落，过往点滴，此间历历。<br>
+                                
+                                明成十一年，夏，府中暑热难解。弟抱冰而入，对饮达旦。是夜星月皎洁，明河在天，不敢或忘。<br>
+                                
+                                十二年秋，兄承佞幸，而宫人讥之。弟护我于前，规劝于后，眉间秋意，见之黯然。<br>
+                                
+                                十五年冬，天降大雪。冀北饿殍遍地，朝野皆惊。冀官为周党一脉，时值吾初投周，为取其信而揽责于身，遂请罪跪于太和殿，见雪覆宫墙，寒风吹彻。弟已为二品副将，甲胄披身而孤标凌云，竟为吾屈膝。<br>
+                                
+                                十七年春，兄进为周氏心腹，风光一时。然后骨肉为行路。七载相知，终化云泥。时弟之神色，凛若霜晨，兄每忆锥心，痛莫能言。<br>
+                                
+                                同年九月，西北干戈乍起。吾独立城楼，叹天高风急，人言马嘶，渐不可闻。<br>
+                                
+                                世人以忠奸论我，然何为忠？忠君是忠？忠国是忠？忠言是忠？忠民是忠？忠者，中心不移也。中心藏之，何日忘之。简若有忠，只为一人耳。<br>
+                                
+                                今战事稍歇，捷讯频传，未知弟近况何如。他乡明月，可映故人眉睫？南国红豆，竟生北地相思。<br>
+                                
+                                愚兄心照明月，血滴红豆，红颜轩冕，弃不足惜。呜呼，王侯将相，功名爵禄，不过隙中驹，石中火，梦中身。<br>
+                                
+                                如今十年约满，纹银五两，兄已为弟备齐。不如归去，做个闲人，东隅已逝，桑榆非晚，红尘惊梦，一任渺尔。<br>
+                                
+                                或可松云共卧，心魂同守，并于阶前避雨，僧窗借塌。与弟偕行，则风雪无惧，则余生可期。凡此种种，言有穷而情不可终。<br>
+                                
+                                一时力衰，潦草搁笔，简泣血谨拜：抱此残躯，望君归期。
+                            </span>
+                        </blockquote>
+                        
+                        <p>去掉权谋背景和结构上的尝试，这个故事其实只是在讲一个人的抉择和取舍。</p>
+
+                        <p>命运有一种残酷的公正：得到的反义词是失去，同义词也是失去。人永远只能顾此失彼。</p>
+
+                        <p>下雨了，他只有一把伞，遮得了天下，遮不了一人。</p>
+                        
+                    </div>
+                </section>
+
+                <!-- In Life, Two Words: Xiu Xian Section -->
+                <section id="xiu-xian-section" class="content-section project-content">
+                    <h3>
+                        <a href="https://www.migu.cn/read/detail/1200300000000162852.html" target="_blank" class="game-title">
+                            人生在世，修仙二字
+                            <span class="link-icon">⤴</span>
+                        </a>
+                    </h3>
+
+                    <!-- 封面图片区域 -->
+                    <div class="novel-cover">
+                        <img src="images/xiu-xian/cover.jpg" alt="Xiu Xian novel cover">
+                        <div class="introduction">
+                            <p>夏凡拜进云莱宗之后，终于听师兄们谈论起关于二字修真法诀的奥秘。据说那是足以让所有修士疯狂的至高机缘——只有真正的天之骄子，才能领悟属于自己的二字真诀。</p>
+
+                            <p>比如整个云莱宗上下，就只有高洁出尘的大师姐一人得到了这样的机缘。</p>
+
+                            <p>"那么，高洁出尘大师姐的二字真诀是什么？"夏凡问。</p>
+
+                            <p style="margin-bottom: 2em;">师兄："杀猪。"</p>
+
+                            <p>非传统修仙世界观，在这个世界有一种名为二字修真法诀的特殊机缘，领悟真决的人只要按照法则修炼，就能迅速提升修为，最终飞升成仙。每个人的二字真诀各不相同，唯一的共同点是获得的人都把它当作诅咒，因为它让善良的人杀戮，让忠诚的人背叛，让有情的人忘情。</p>
+
+                            <p>"天，难道就不会错吗？"</p>
+
+                            <p>用轻小说的风格，讲述一群怀揣着天真理想的少年，如何用血肉之躯对抗命运的焚烧。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- About Section -->
+                <section id="about-section" class="content-section project-content">
+                    <!-- 工作经历 -->
+                    <div class="about-card">
+                        <h2>工作经历</h2>
+                        <div class="experience-item">
+                            <div class="year">2021-2024</div>
+                            <div class="job-title">三七游戏 | 主文案 </div>
+                            <div class="project-name">扶摇一梦, MMORPG</div>
+                        </div>
+                        <div class="experience-item">
+                            <div class="year">2016-2020</div>
+                            <div class="job-title">全职作者 | 漫画脚本&小说</div>
+                        </div>
+                    </div>
+
+                    <!-- 联系方式 -->
+                    <div class="about-card">
+                        <h2>联系方式</h2>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:fcxishan@qq.com">fcxishan@qq.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+86 182-7091-7675</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-link"></i>
+                                <a href="https://bsky.app/profile/luisemeng.bsky.social" target="_blank">@luisemeng.bsky.social</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- More Writing Samples Section -->
+                <section id="more-samples-section" class="content-section project-content">
+                    <!-- 第一个故事 -->
+                    <h3>日式轻小说</h3>
+                    <div class="story-container">
+                        <div class="story-content" id="story-content-1">
+                            <!-- 内容将通过JavaScript动态加载 -->
+                        </div>
+                    </div>
+
+                    <!-- 第二个故事 -->
+                    <h3>欧风软科幻</h3>
+                    <div class="story-container">
+                        <div class="story-content" id="story-content-2">
+                            <!-- 内容将通过JavaScript动态加载 -->
+                        </div>
+                    </div>
+
+                    <!-- 第三个故事 -->
+                    <h3>古风吐槽</h3>
+                    <div class="story-container">
+                        <div class="story-content" id="story-content-3">
+                            <!-- 内容将通过JavaScript动态加载 -->
+                        </div>
+                    </div>
+
+                    <!-- 第四个故事 -->
+                    <h3>古风正剧</h3>
+                    <div class="story-container">
+                        <div class="story-content" id="story-content-4">
+                            <!-- 内容将通过JavaScript动态加载 -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- JavaScript代码部分 -->
+    <script>
+        // 获取所有需要的元素
+        const homeLink = document.getElementById('home-link');
+        const scrollContainer = document.querySelector('.scroll-container');
+        const contentSections = document.querySelectorAll('.content-section');
+        const menuLinks = document.querySelectorAll('.menu-link');
+
+        // 显示主页内容的函数
+        function showHome() {
+            // 显示塞尔达图片
+            scrollContainer.style.display = 'block';
+            // 隐藏所有项目内容
+            contentSections.forEach(section => {
+                section.classList.remove('active');
+            });
+            // 移除所有菜单项的激活状态
+            menuLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+        }
+
+        // 点击个人介绍时返回主页
+        homeLink.addEventListener('click', showHome);
+
+        // 修改菜单点击事件处理
+        document.querySelectorAll('.menu-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // 隐藏塞尔达图片
+                scrollContainer.style.display = 'none';
+                
+                // 移除所有链接和区块的active类
+                menuLinks.forEach(l => l.classList.remove('active'));
+                contentSections.forEach(section => {
+                    section.classList.remove('active');
+                });
+                
+                // 为点击的链接添加active类
+                link.classList.add('active');
+                
+                // 显示对应的区块
+                const sectionId = link.getAttribute('href').substring(1) + '-section';
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    section.classList.add('active');
+                    // 如果是The WELL页面，加载内容
+                    if (sectionId === 'the-well-section') {
+                        loadStoryContent();
+                    }
+                }
+            });
+        });
+
+        // 初始显示主页
+        showHome();
+
+        // 重启游戏按钮功能
+        document.querySelector('.restart-btn')?.addEventListener('click', () => {
+            const gameFrame = document.getElementById('game-frame');
+            // 通过重新加载iframe来重启游戏
+            gameFrame.src = gameFrame.src;
+        });
+
+        // 添加加载故事内容的函数
+        async function loadStoryContent() {
+            try {
+                const response = await fetch('content/well-content.html');
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const content = await response.text();
+                
+                // 简化HTML结构，移除作者信息
+                const formattedContent = `
+                    <div class="story-content">
+                        <h1>The WELL</h1>
+                        ${content.split('\n\n').map(paragraph => 
+                            paragraph.trim() ? `<p>${paragraph.trim()}</p>` : ''
+                        ).join('')}
+                    </div>
+                `;
+                
+                document.getElementById('well-content').innerHTML = formattedContent;
+                
+            } catch (error) {
+                console.error('Error loading story content:', error);
+                document.getElementById('well-content').innerHTML = 
+                    `<p>Error loading content: ${error.message}</p>`;
+            }
+        }
+    </script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

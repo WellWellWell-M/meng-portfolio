@@ -598,7 +598,7 @@ body {
 .introduction {
     background: rgba(76, 29, 149, 0.1);
     border-radius: 16px;
-    padding: 1rem 1.5rem 2rem 1.5rem;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
     margin-top: 2rem;  /* 确保与上方图片有足够间距 */
 }
 
@@ -866,7 +866,7 @@ blockquote {
 
 /* 中文诗句和文本样式 */
 .chinese-poem, .chinese-text {
-    color: #FFE381;  /* 黄色 */
+    color: #f9e59c;  /* 黄色 */
     margin-bottom: 1rem;  /* 在中英文之间添加间距 */
     display: block;
     text-align: center;
@@ -893,15 +893,24 @@ blockquote br {
     font-style: normal;
     margin-top: 1rem;
     text-align: left; 
-    color: #FFE381;  /* 浅色 */
+    color: #f9e59c;  /* 浅色 */
 }
 
-.language-switcher-container {
-    position: absolute; /* 绝对定位 */
-    top: 20px;         /* 距离顶部20像素 */
-    right: 20px;       /* 距离右侧20像素 */
-    z-index: 1000;     /* 确保在其他元素之上 */
+.language-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    margin: 0 !important;
+    opacity: 0.8;
 }
+
+/* 删除旧的语言切换器样式 */
+/* .language-switcher-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+} */
 
 .language-option {
     cursor: pointer;    /* 鼠标指针样式 */
@@ -981,32 +990,24 @@ blockquote br {
     color: #c7b9dc;
 }
 
-/* 语言切换按钮样式 */
-.language-switcher {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-    padding: 0 20px;
+/* 只保留这一组语言切换样式，删除其他所有相关代码 */
+.language-switch {
+    position: fixed;  /* 使用 fixed 定位 */
+    top: 30px;
+    right: 20px;
+    z-index: 1000;
+    opacity: 0.8;
 }
 
-.language-option {
-    padding: 8px 16px;
-    border: 1px solid #FCD34D;
-    border-radius: 4px;
-    background: transparent;
-    color: #FCD34D;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 0.9rem;
+.language-switch span {
+    color: #FFE381;
 }
 
-.language-option:hover {
-    background: rgba(252, 211, 77, 0.1);
+.language-switch a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
 }
 
-.language-option.active {
-    background: #FCD34D;
-    color: #4C1D95;
-    border-color: #FCD34D;
+.language-switch a:hover {
+    color: #FFE381;
 }
