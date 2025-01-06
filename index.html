@@ -2,24 +2,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Meng's Portfolio</title>
+    <meta http-equiv="refresh" content="0; url=./en/">
     <script>
-        // 自动检测浏览器语言并重定向
-        var userLang = navigator.language || navigator.userLanguage;
-        if (userLang.indexOf('zh') !== -1) {
-            window.location.href = '/zh/';
-        } else {
-            window.location.href = '/en/';
-        }
+        window.location.href = "./en/";
     </script>
 </head>
 <body>
-    <div style="text-align: center; margin-top: 50px;">
-        <h1>Choose Your Language / 选择语言</h1>
-        <p>
-            <a href="/en/">English</a> | 
-            <a href="/zh/">中文</a>
-        </p>
-    </div>
+    如果页面没有自动跳转，请<a href="./en/">点击这里</a>。
+    If you are not redirected automatically, please <a href="./en/">click here</a>.
 </body>
 </html>
